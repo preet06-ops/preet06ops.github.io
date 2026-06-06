@@ -1,11 +1,11 @@
 :root {
-    --primary-glow: #35e7ff;
-    --primary-accent: #5f8cff;
-    --bg-dark: #07101c;
-    --card-bg: rgba(13, 23, 40, 0.88);
-    --card-border: rgba(116, 170, 255, 0.22);
-    --text-main: #eaf5ff;
-    --text-soft: #b3c9e2;
+    --primary-glow: #ff4d5e;
+    --primary-accent: #ff7a59;
+    --bg-dark: #050507;
+    --card-bg: rgba(18, 10, 12, 0.9);
+    --card-border: rgba(255, 77, 94, 0.22);
+    --text-main: #fff2f4;
+    --text-soft: #d7b9be;
 }
 
 *,
@@ -16,9 +16,9 @@
 
 body {
     background:
-        radial-gradient(circle at 15% 20%, rgba(53, 231, 255, 0.14), transparent 28%),
-        radial-gradient(circle at 85% 80%, rgba(95, 140, 255, 0.18), transparent 30%),
-        linear-gradient(135deg, #050b14 0%, var(--bg-dark) 48%, #060f1a 100%);
+        radial-gradient(circle at 15% 20%, rgba(255, 77, 94, 0.14), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(255, 122, 89, 0.16), transparent 30%),
+        linear-gradient(135deg, #0b0506 0%, var(--bg-dark) 48%, #130709 100%);
     color: var(--text-main);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
@@ -52,7 +52,7 @@ header h1 {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-shadow: 0 0 12px rgba(53, 231, 255, 0.35);
+    text-shadow: 0 0 12px rgba(255, 77, 94, 0.36);
 }
 
 header p {
@@ -93,7 +93,7 @@ header p {
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(53, 231, 255, 0.75), rgba(95, 140, 255, 0.35), rgba(255, 255, 255, 0.08));
+    background: linear-gradient(135deg, rgba(255, 77, 94, 0.8), rgba(255, 122, 89, 0.38), rgba(255, 255, 255, 0.08));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -103,21 +103,21 @@ header p {
 
 .glow-box:nth-child(1) {
     background:
-        radial-gradient(circle at top left, rgba(53, 231, 255, 0.12), transparent 40%),
+        radial-gradient(circle at top left, rgba(255, 77, 94, 0.12), transparent 40%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%),
         var(--card-bg);
 }
 
 .glow-box:nth-child(2) {
     background:
-        radial-gradient(circle at top left, rgba(95, 140, 255, 0.15), transparent 40%),
+        radial-gradient(circle at top left, rgba(255, 122, 89, 0.15), transparent 40%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%),
         rgba(10, 22, 41, 0.9);
 }
 
 .glow-box:nth-child(3) {
     background:
-        radial-gradient(circle at top left, rgba(49, 255, 209, 0.12), transparent 40%),
+        radial-gradient(circle at top left, rgba(255, 103, 120, 0.12), transparent 40%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%),
         rgba(10, 20, 37, 0.9);
 }
@@ -136,17 +136,44 @@ header p {
 }
 
 .glow-box:hover {
-    border-color: rgba(53, 231, 255, 0.62);
+    border-color: rgba(255, 77, 94, 0.64);
     box-shadow:
         0 18px 42px rgba(0, 0, 0, 0.44),
-        0 0 18px rgba(53, 231, 255, 0.25),
-        0 0 32px rgba(95, 140, 255, 0.18),
+        0 0 18px rgba(255, 77, 94, 0.26),
+        0 0 32px rgba(255, 122, 89, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transform: translateY(-6px);
 }
 
+.profile-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.profile-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 77, 94, 0.3);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.profile-link:hover {
+    border-color: rgba(255, 77, 94, 0.78);
+    background: rgba(255, 77, 94, 0.08);
+    box-shadow: 0 0 18px rgba(255, 77, 94, 0.2);
+    transform: translateY(-2px);
+}
+
 .link-text {
-    color: #7fdfff;
+    color: #ffb6bd;
     text-decoration: none;
     font-weight: bold;
     display: inline-flex;
@@ -155,17 +182,17 @@ header p {
     margin-top: 6px;
     padding: 10px 14px;
     border-radius: 999px;
-    border: 1px solid rgba(53, 231, 255, 0.28);
+    border: 1px solid rgba(255, 77, 94, 0.28);
     background: rgba(255, 255, 255, 0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .glow-btn {
     padding: 15px 30px;
-    margin-top: 36px;
-    background: linear-gradient(135deg, rgba(53, 231, 255, 0.18), rgba(95, 140, 255, 0.25));
+    margin-top: 18px;
+    background: linear-gradient(135deg, rgba(255, 77, 94, 0.18), rgba(255, 122, 89, 0.24));
     color: var(--text-main);
-    border: 1px solid rgba(53, 231, 255, 0.42);
+    border: 1px solid rgba(255, 77, 94, 0.42);
     border-radius: 999px;
     text-decoration: none;
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
@@ -176,26 +203,26 @@ header p {
 }
 
 .glow-btn:hover {
-    background: linear-gradient(135deg, rgba(53, 231, 255, 0.28), rgba(95, 140, 255, 0.38));
+    background: linear-gradient(135deg, rgba(255, 77, 94, 0.3), rgba(255, 122, 89, 0.4));
     color: var(--text-main);
-    border-color: rgba(53, 231, 255, 0.8);
+    border-color: rgba(255, 77, 94, 0.82);
     box-shadow:
         0 16px 34px rgba(0, 0, 0, 0.34),
-        0 0 20px rgba(53, 231, 255, 0.4),
-        0 0 36px rgba(95, 140, 255, 0.22);
+        0 0 20px rgba(255, 77, 94, 0.42),
+        0 0 36px rgba(255, 122, 89, 0.24);
     transform: translateY(-3px);
 }
 
 .link-text:hover {
-    border-color: rgba(53, 231, 255, 0.7);
-    background: rgba(53, 231, 255, 0.08);
-    box-shadow: 0 0 18px rgba(53, 231, 255, 0.18);
+    border-color: rgba(255, 77, 94, 0.72);
+    background: rgba(255, 77, 94, 0.08);
+    box-shadow: 0 0 18px rgba(255, 77, 94, 0.18);
     transform: translateX(3px);
 }
 
 .glow-btn:focus-visible,
 .link-text:focus-visible {
-    outline: 2px solid rgba(53, 231, 255, 0.85);
+    outline: 2px solid rgba(255, 77, 94, 0.85);
     outline-offset: 3px;
 }
 
@@ -203,5 +230,7 @@ header p {
     width: min(1080px, 100%);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
     padding-top: 8px;
 }
